@@ -1,0 +1,15 @@
+
+
+   <div class="board">
+    <div class="row board-row" *ngFor="let row of currentSizeArray; trackBy: trackByRow; let i = index">
+      <app-box *ngFor="let cell of currentSizeArray; let j = index;" [currentBoardState]="currentBoardState"
+        [cell]="{ row: i, col: j, value: '' }"></app-box>
+    </div>
+  </div>
+  
+  <div class="result" *ngIf="(gameStatus$ | async) === 'Completed' || (gameStatus$ | async) === 'Exited'">
+    <h3 *ngIf="(winner$ | async) !== 'None' && (winner$ | async) !== ''">Player {{winner$ | async }} Wins!</h3>
+    <h4 *ngIf="(winner$ | async) === ''">{{drawMessage}} </h4>
+    <h4 *ngIf="(gameStatus$ | async) === 'Exited'">{{exitMessage}} </h4>
+
+  </div>

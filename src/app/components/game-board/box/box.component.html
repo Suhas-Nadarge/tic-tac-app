@@ -1,0 +1,4 @@
+
+ <button class="box" style="background-color: whitesmoke;" (click)="buttonClicked()" [disabled]="((currentWinner$ | async) !== 'None') || (gameStatus$ | async) !== 'InProgress' ">
+   <h3 [class]="(currentBoardState.highLightRow.includes(index)) && ['X','O'].includes(currentWinner$ | async)? 'winner' : ''">{{ cell.value }}</h3> 
+</button>

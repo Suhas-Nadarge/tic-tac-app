@@ -1,0 +1,28 @@
+
+.box {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  border: 1px solid #808080;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+@media (max-width: 540px) {
+  .box {
+    width: 42px;
+    height: 42px;
+  }
+}
+@media (max-width: 448px) {
+  .box {
+    width:32px;
+    height: 32px;
+  }
+}
+
+.winner {
+  color: #ff0000;
+}

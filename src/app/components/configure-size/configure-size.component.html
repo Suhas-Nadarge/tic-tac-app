@@ -1,0 +1,19 @@
+
+ <div class="container">
+<label><b> Board Size </b></label>
+
+<select class="form-control" [(ngModel)]="boardSize" [disabled] = "(gameStatus$ | async) === 'InProgress'" (change)="onSizeChange($event)">
+    <option *ngFor="let size of sizes; trackBy: trackByRow; let i = index" [value]="size">{{size}}  x  {{size}} </option>
+  </select>
+
+  <button class="btn btn-primary" [disabled]="(gameStatus$ | async) === 'InProgress' "(click)="startNewGame()">Play</button>
+  <button class="btn btn-secondary" [disabled]="(gameStatus$ | async) !== 'InProgress' "(click)="endGame()">End</button>
+</div>
+
+<div class="player-turn">
+  <span [class]="'active-player'"*ngIf="(gameStatus$ | async) !== 'InProgress'">{{startMessage}}</span>
+
+    <span [class]="'active-player'" *ngIf="(gameStatus$ | async) === 'InProgress'">Current Player: {{ (currentPlayer$ | async) === 'X' ? 'O' : 'X' }} </span>
+  </div>
+  
+

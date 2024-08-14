@@ -1,0 +1,15 @@
+
+.container {
+  align-items: center;
+}
+
+.player-turn {
+  display: flex;
+  justify-content: space-around;
+}
+
+.active-player {
+  font-weight: bold;
+  color: #008000; /* Or any desired color */
+}
+select.form-control, .btn{ margin: 0 5px;}

@@ -1,1 +1,106 @@
-/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    overflow: hidden;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.roboto-medium {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.btn {
+    height: 32px;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+
+    &.btn-primary {
+        background-color: rgb(31, 64, 183);
+        border: 1px solid rgb(31, 64, 183);
+        color: #fff;
+        padding: 0 15px;
+    }
+
+    &.btn-secondary {
+        background-color: #fff;
+        border: 1px solid rgb(31, 64, 183);
+        color: #666;
+        padding: 0 15px;
+    }
+
+    &:disabled {
+        background-color: #b3b3b3;
+        color: #000;
+        border: 1px solid #b3b3b3;
+    }
+}
+
+select.form-control {
+    height: 32px;
+    padding: 0 15px 0 8px;
+    border-radius: 5px;
+}
+
+.player-turn {
+    padding: 10px 0;
+}
+
+.active-player {
+    font-size: 22px;
+    color: rgb(31, 64, 183) !important;
+}
+
+.box h3 {
+    font-size: 24px;
+    font-family: "Kumbh Sans", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 700;
+}
+
+.board {
+    border: 1px solid #808080;
+
+    .board-row {
+        justify-content: center;
+        border-bottom: 1px solid #808080;
+
+        .box {
+            border: none;
+            border-right: 1px solid #808080;
+        }
+
+        app-box:last-child {
+            .box {
+                border-right: inherit !important;
+            }
+        }
+    }
+}
+
+.result {
+    text-align: center;
+}
+
+app-game-board {
+    align-self: center !important;
+}
+
+app-configure-size {
+    align-self: center !important;
+}

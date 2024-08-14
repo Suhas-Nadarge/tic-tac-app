@@ -1,0 +1,19 @@
+
+
+.board { 
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.row {
+  display: flex;
+}
+
+h3,h4 {
+  color: green;
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
+  animation: bounce 1s infinite;
+  align-items: center;
+}
+
